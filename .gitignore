@@ -32,3 +32,4 @@ htdocs/wp/wp-content/themes/
 htdocs/.htaccess
 htdocs/composer.lock
 htdocs/wp-content/plugins/timber/
+htdocs/wp-content/plugins/woocommerce/
