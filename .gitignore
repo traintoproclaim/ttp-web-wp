@@ -33,3 +33,6 @@ htdocs/.htaccess
 htdocs/composer.lock
 htdocs/wp-content/plugins/timber/
 htdocs/wp-content/plugins/woocommerce/
+htdocs/wp/wp-content/plugins/timber/
+htdocs/wp/wp-content/plugins/woocommerce/
+node_modules/

@@ -24,11 +24,15 @@
     "php": ">=5.3.0",
     "wordpress": "3.8.*",
     "fancyguy/webroot-installer": "1.0.0",
-    "jarednova/timber": "0.17.*",
+    "jarednova/timber": "0.18.*",
     "wpackagist-plugin/woocommerce": "2.1.*"
   },
   "extra": {
     "webroot-dir": "wp",
-    "webroot-package": "wordpress"
+    "webroot-package": "wordpress",
+	"installer-paths": {
+		"wp/wp-content/plugins/{$name}/": ["type:wordpress-plugin"]
+	}
+
   }
 }
