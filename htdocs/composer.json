@@ -9,30 +9,36 @@
       "package": {
         "name": "wordpress",
         "type": "webroot",
-        "version": "3.8.2",
+        "version": "3.9.1",
         "dist": {
           "type": "zip",
-          "url": "https://github.com/WordPress/WordPress/archive/3.8.2.zip"
+          "url": "https://github.com/WordPress/WordPress/archive/3.9.1.zip"
         },
         "require": {
           "fancyguy/webroot-installer": "1.0.0"
         }
       }
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/traintoproclaim/ttp-wp-theme"
     }
   ],
   "require": {
     "php": ">=5.3.0",
-    "wordpress": "3.8.*",
+    "wordpress": "3.9.*",
     "fancyguy/webroot-installer": "1.0.0",
     "jarednova/timber": "0.18.*",
     "wpackagist-plugin/woocommerce": "2.1.*",
- 	"wpackagist-plugin/ml-slider": "2.*"
+ 	"wpackagist-plugin/ml-slider": "2.*",
+ 	"traintoproclaim/ttp-wp-theme": "dev-master"
   },
   "extra": {
     "webroot-dir": "wp",
     "webroot-package": "wordpress",
 	"installer-paths": {
-		"wp/wp-content/plugins/{$name}/": ["type:wordpress-plugin"]
+		"wp/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+		"wp/wp-content/themes/{$name}/": ["type:wordpress-theme"]
 	}
 
   }
