@@ -8,11 +8,11 @@ var lr = require('tiny-lr');
 var server = lr();
 
 var srcTheme = [
-    'htdocs/wp/wp-content/themes/ttp/views/*.twig',
-    'htdocs/wp/wp-content/themes/ttp/*.php',
-    'htdocs/wp/wp-content/themes/ttp/*.css',
-    'htdocs/wp/wp-content/themes/ttp/css/*.css',
-    'htdocs/wp/wp-content/themes/ttp/js/*.js'
+    'htdocs/wp/wp-content/themes/ttp-wp-theme/views/*.twig',
+    'htdocs/wp/wp-content/themes/ttp-wp-theme/*.php',
+    'htdocs/wp/wp-content/themes/ttp-wp-theme/*.css',
+    'htdocs/wp/wp-content/themes/ttp-wp-theme/css/*.css',
+    'htdocs/wp/wp-content/themes/ttp-wp-theme/js/*.js'
 ];
 
 gulp.task('default', function() {
@@ -42,8 +42,6 @@ gulp.task('upload', function() {
 	};
 	gulp.src('htdocs')
 		.pipe(exec('rsync -rzlt --chmod=Dug=rwx,Fug=rw,o-rwx --delete --exclude-from="upload-exclude.txt" --stats --rsync-path="sudo -u vu2003 rsync" --rsh="ssh -i <%= options.key %>" <%= file.path %>/ <%= options.dest %>', options));
-	gulp.src('htdocs/images')
-		.pipe(exec('rsync -rzlt --chmod=Dug=rwx,Fug=rw,o-rwx --stats --rsync-path="sudo -u vu2003 rsync" --rsh="ssh -i <%= options.key %>" <%= file.path %>/ <%= options.dest %>images/', options));
 });
 
 

@@ -1,0 +1,5 @@
+.git
+wp/wp-config.php
+wp/wp-content/uploads/
+wp/wp-content/themes/ttp-wp-theme/vendor/twbs/
+wp/wp-content/themes/ttp-wp-theme/vendor/composer/
