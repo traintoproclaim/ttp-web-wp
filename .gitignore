@@ -1,5 +1,3 @@
-wp-config.php
-
 htdocs/wp/index.php
 htdocs/wp/license.txt
 htdocs/wp/readme.html
@@ -29,11 +27,11 @@ htdocs/wp/xmlrpc.php
 .settings/
 htdocs/vendor/
 htdocs/wp/wp-content/themes/
-htdocs/.htaccess
 htdocs/composer.lock
-htdocs/wp-content/plugins/timber/
-htdocs/wp-content/plugins/woocommerce/
 htdocs/wp/wp-content/plugins/timber/
 htdocs/wp/wp-content/plugins/woocommerce/
 node_modules/
 htdocs/wp/wp-content/plugins/ml-slider/
+
+htdocs/media/sample/
+htdocs/wp/wp-content/uploads/woocommerce_uploads/
