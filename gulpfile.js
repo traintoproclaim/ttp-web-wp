@@ -38,10 +38,10 @@ gulp.task('upload', function() {
 		silent: false,
 		src: "htdocs",
 		dest: "root@new.traintoproclaim.com:/var/www/virtual/new.traintoproclaim.com/htdocs/",
-		key: "/home/cambell/dev.key"
+		key: "/home/cambell/.ssh/dev_rsa"
 	};
 	gulp.src('htdocs')
-		.pipe(exec('rsync -rzlt --chmod=Dug=rwx,Fug=rw,o-rwx --delete --exclude-from="upload-exclude.txt" --stats --rsync-path="sudo -u vu2003 rsync" --rsh="ssh -i <%= options.key %>" <%= file.path %>/ <%= options.dest %>', options));
+		.pipe(exec('rsync -rzlt --chmod=Dug=rwx,Fug=rw,o-rwx --exclude-from="upload-exclude.txt" --stats --rsync-path="sudo -u vu2003 rsync" --rsh="ssh -i <%= options.key %>" <%= file.path %>/ <%= options.dest %>', options));
 });
 
 
@@ -49,21 +49,21 @@ gulp.task('db-backup', function() {
 	var options = {
 		silent: false,
 		dest: "root@new.traintoproclaim.com",
-		key: "/home/cambell/dev.key",
-		password: gutil.env.password
+		key: "/home/cambell/.ssh/dev_rsa",
+		password: process.env.password
 	};
 	gulp.src('')
-		.pipe(exec('mysqldump -u cambell --password=<%= options.password %> traintoproclaim | gzip > backup/backup.sql.gz', options));
+		.pipe(exec('mysqldump --host=default.local -u cambell --password=<%= options.password %> traintoproclaim | gzip > backup/backup.sql.gz', options));
 });
 
 gulp.task('db-copy', ['db-backup'], function() {
 	var options = {
 		silent: false,
 		dest: "root@new.traintoproclaim.com",
-		key: "/home/cambell/dev.key",
-		password: gutil.env.password
+		key: "/home/cambell/.ssh/dev_rsa",
+		password: process.env.password
 	};
 	gulp.src('')
-		.pipe(exec('ssh -C -i <%= options.key %> <%= options.dest %> mysqldump -u cambell --password=<%= options.password %> traintoproclaim2 | mysql -u cambell --password=<%= options.password %> -D traintoproclaim', options));
+		.pipe(exec('ssh -C -i <%= options.key %> <%= options.dest %> mysqldump -u cambell --password=<%= options.password %> traintoproclaim_wp | mysql --host=default.local -u cambell --password=<%= options.password %> -D traintoproclaim', options));
 });
 

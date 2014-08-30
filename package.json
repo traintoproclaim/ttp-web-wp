@@ -16,10 +16,10 @@
     "url": "https://github.com/traintoproclaim/ttp-web/issues"
   },
   "devDependencies": {
-    "gulp-util": "~2.2.14",
-    "gulp": "~3.5.2",
-    "gulp-exec": "~1.0.4",
-    "gulp-livereload": "~1.2.0",
+    "gulp-util": "~2.2",
+    "gulp": "~3.8",
+    "gulp-exec": "~1.0",
+    "gulp-livereload": "~1.2",
     "tiny-lr": "0.0.5"
   }
 }

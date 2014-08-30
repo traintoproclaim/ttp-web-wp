@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <buildpath>
-	<buildpathentry kind="src" path="htdocs"/>
+	<buildpathentry external="true" kind="lib" path="C:/Scripts/phpunit-lts.phar"/>
 	<buildpathentry kind="con" path="org.eclipse.php.core.LANGUAGE"/>
+	<buildpathentry excluding="**/vendor/|**/vendor/bin/|**/vendor/composer/|**/vendor/doctrine/|**/vendor/pimple/|**/vendor/sebastian/|**/vendor/sillsdev/|**/vendor/symfony/|**/vendor/twbs/|wp/wp-content/plugins/ttp-wp-results/vendor/phpunit|wp/wp-content/plugins/ttp-wp-results/vendor/phpunit/|wp/wp-content/plugins/ttp-wp-results/vendor/doctrine|wp/wp-content/plugins/ttp-wp-results/vendor/doctrine/|wp/wp-content/plugins/ttp-wp-results/vendor/sillsdev|wp/wp-content/plugins/ttp-wp-results/vendor/sillsdev/" kind="src" path="htdocs"/>
+	<buildpathentry kind="src" path="htdocs/wp/wp-content/plugins/ttp-wp-results/vendor/phpunit"/>
+	<buildpathentry kind="src" path="htdocs/wp/wp-content/plugins/ttp-wp-results/vendor/doctrine"/>
+	<buildpathentry kind="src" path="htdocs/wp/wp-content/plugins/ttp-wp-results/vendor/sillsdev"/>
 </buildpath>

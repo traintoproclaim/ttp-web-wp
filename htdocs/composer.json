@@ -21,6 +21,10 @@
     },
     {
       "type": "vcs",
+      "url": "https://github.com/cambell-prince/timber"
+    },
+    {
+      "type": "vcs",
       "url": "https://github.com/traintoproclaim/ttp-wp-theme"
     }
   ],
@@ -28,9 +32,9 @@
     "php": ">=5.3.0",
     "wordpress": "3.9.*",
     "fancyguy/webroot-installer": "1.0.0",
-    "jarednova/timber": "0.18.*",
-    "wpackagist-plugin/woocommerce": "2.1.*",
+    "jarednova/timber": "dev-master",
  	"wpackagist-plugin/ml-slider": "2.*",
+ 	"wpackagist-plugin/wp-e-commerce": "3.8.*",
  	"traintoproclaim/ttp-wp-theme": "dev-master"
   },
   "extra": {
